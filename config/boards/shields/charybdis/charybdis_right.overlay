@@ -46,4 +46,13 @@
 &trackball {
     status = "okay";
     irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    
+    /* ZMK input device 축 정의 */
+    zephyr,axis-x {
+        input-code = <0>;  /* INPUT_REL_X */
+    };
+    
+    zephyr,axis-y {
+        input-code = <1>;  /* INPUT_REL_Y */
+    };
 };
